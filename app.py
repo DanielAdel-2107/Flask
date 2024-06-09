@@ -35,6 +35,7 @@ def predict():
         if 'features' not in data:
             return jsonify({'error': 'Missing features in request.'}), 400
 
+
         features = np.array(data['features']).reshape(1, -1)
         prediction = model.predict(features)
         return jsonify({'prediction': prediction.tolist()})
