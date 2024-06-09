@@ -5,6 +5,7 @@ from catboost import CatBoostRegressor
 from sklearn.model_selection import train_test_split
 import joblib
 from flask import Flask, request, jsonify
+from werkzeug.urls import url_quote_plus as url_quote
 
 # Load data and preprocess (as per your original script)
 df = pd.read_csv('kc_house_data.csv')
@@ -41,7 +42,7 @@ def predict():
     except Exception as e:
 
 
-        
+
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
