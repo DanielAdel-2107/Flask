@@ -2,7 +2,6 @@ pandas==1.5.3
 numpy==1.23.5
 catboost==1.2.5
 scikit-learn==1.2.2
-Flask==2.2.3
+Flask
 joblib==1.2.0
 gunicorn==20.1.0
-werkzeug==2.1.0
